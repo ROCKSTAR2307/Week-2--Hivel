@@ -1,0 +1,41 @@
+{
+  "name": "user-service-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "swagger": "node swagger.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.18.0",
+    "axios": "^1.12.2",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "csv-parse": "^6.1.0",
+    "csv-parser": "^3.2.0",
+    "csv-stringify": "^6.6.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "fast-csv": "^5.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "prisma": "^6.18.0",
+    "rate-limit-redis": "^4.2.3",
+    "redis": "^5.9.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^13.0.0",
+    "winston": "^3.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "swagger-autogen": "^2.23.7"
+  }
+}

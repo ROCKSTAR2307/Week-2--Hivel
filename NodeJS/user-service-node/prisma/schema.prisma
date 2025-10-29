@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:welcome@localhost:3307/user_service_db"
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  firstName  String
+  lastName   String?
+  email      String   @unique
+  phone      String?
+  gender     String?
+  city       String?
+  department String?
+  image      String?
+  
+  createdBy  String
+  createdAt  DateTime @default(now())
+  updatedBy  String?
+  updatedAt  DateTime @updatedAt
+  isDeleted  Boolean  @default(false)
+  
+  @@map("users")
+}
+
+model Auth {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+  apiKey   String? @unique
+}
